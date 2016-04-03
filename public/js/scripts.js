@@ -14,7 +14,7 @@ app.config(function($routeProvider){
             controller  : 'mainController' //each page can have a different controller if needed
         })
         .when('/other', {
-            templateUrl : '/html/about.html',
+            templateUrl : '/html/other.html',
             controller  : 'mainController'
         })
 })
