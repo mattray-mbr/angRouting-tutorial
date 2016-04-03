@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<!-- all script and link tags live in the shell file -->
+
+<!-- angular -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>
+<!-- angular routing !!important!!-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+<!-- angular module and config routes -->
+<script src="../js/scripts.js"></script>
+<!-- all controllers -->
+<script src="../js/mainController.js"></script>
+<script src="../js/headerController.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- using ng-include to bring in the same header and footer for each page -->
+    <ng-include src=" '/html/header.html' "></ng-include>
+    <!-- ng-include is used in a similar fashion to ng-view -->
+    <!-- we can have mulitple includes unlike the ng-view -->
+    
+
+    <!-- there has to be one and only one ng-view that brings in the main content for each page -->
+    <div ng-view></div>
+
+    <ng-include src=" '/html/footer.html' "></ng-include>
+</body>
+</html>
