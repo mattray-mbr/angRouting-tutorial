@@ -9,7 +9,6 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-// var routes = require('./controllers/routes.js')
 
 
 var app = express();
@@ -31,9 +30,7 @@ app.get('/', function(req, res) {
     res.sendFile('html/shell.html', {root : './public'});
 });
 
-app.get('/api/load', routes.load)
-
-app.post('/api/sendEmail', routes.sendEmail)
+//there are no other back end routes for this example
 
 // Creating Server and Listening for Connections 
 var port = 3000
